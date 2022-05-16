@@ -1,0 +1,22 @@
+{
+    "name": "goit-node-hw-01",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "start:dev": "npx nodemon server",
+        "lint": "npx eslint src server.js",
+        "lint:fix": "npx eslint --fix src server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    },
+    "dependencies": {
+        "commander": "^9.2.0",
+        "yargs": "^17.5.1"
+    }
+}
