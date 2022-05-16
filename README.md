@@ -3,6 +3,7 @@
 # Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
 
 node index.js --action="list"
+![Image alt](https://monosnap.com/file/JW95r39Xl7AfnUrzixbz5zJrmhl9PR)
 
 <img src="https://monosnap.com/file/JW95r39Xl7AfnUrzixbz5zJrmhl9PR" alt=" Перший скрін">
 
