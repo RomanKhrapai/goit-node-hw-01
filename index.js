@@ -18,7 +18,7 @@ program
 program.parse(process.argv);
 const arg = program.opts();
 
-async function showeMesage({ title, data }) {
+async function showMessage({ title, data }) {
     console.log(title);
     console.table(data);
 }
@@ -26,19 +26,19 @@ async function showeMesage({ title, data }) {
 async function invokeAction({ action, id, name, email, phone }) {
     switch (action) {
         case "list":
-            showeMesage(await listContacts());
+            showMessage(await listContacts());
             break;
 
         case "get":
-            showeMesage(await getContactById(id));
+            showMessage(await getContactById(id));
             break;
 
         case "add":
-            showeMesage(await addContact(name, email, phone));
+            showMessage(await addContact(name, email, phone));
             break;
 
         case "remove":
-            showeMesage(await removeContact(id));
+            showMessage(await removeContact(id));
             break;
 
         default:
