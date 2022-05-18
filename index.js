@@ -1,4 +1,9 @@
-const contacts = require("./contacts.js");
+const {
+    listContacts,
+    getContactById,
+    addContact,
+    removeContact,
+} = require("./contacts.js");
 const { Command } = require("commander");
 const argv = require("yargs").argv;
 
@@ -13,22 +18,27 @@ program
 program.parse(process.argv);
 const arg = program.opts();
 
+async function showeMesage({ title, data }) {
+    console.log(title);
+    console.table(data);
+}
+
 async function invokeAction({ action, id, name, email, phone }) {
     switch (action) {
         case "list":
-            console.log(await contacts.listContacts());
+            showeMesage(await listContacts());
             break;
 
         case "get":
-            console.log(await contacts.getContactById(id));
+            showeMesage(await getContactById(id));
             break;
 
         case "add":
-            console.log(await contacts.addContact(name, email, phone));
+            showeMesage(await addContact(name, email, phone));
             break;
 
         case "remove":
-            console.log(await contacts.removeContact(id));
+            showeMesage(await removeContact(id));
             break;
 
         default:
